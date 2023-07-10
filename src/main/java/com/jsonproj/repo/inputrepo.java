@@ -16,6 +16,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.jsonproj.vo.ProductVo;
+import com.jsonproj.vo.TransprodVO;
 
 public class inputrepo {
 	
@@ -33,13 +34,31 @@ public List<ProductVo> getInputproductdatafromAppl(List<Long> outputProductList)
 }
 
 
+public List<TransprodVO> getinputdatafromsamedb(){
+	
+	List<TransprodVO> returnlist=inputjdbcTemplate.query("select", new InputProductRowMapper());
+	return returnlist;
+	
+}
+
+class InputProductRowMapper implements RowMapper<TransprodVO>{
+	@Override
+	public TransprodVO mapRow(ResultSet rs,int rownum) throws SQLException{
+		TransprodVO obj=new TransprodVO();
+		obj.setProductID(rs.getLong("ProductID"));
+		byte[] byteArray=rs.getBytes("Publishmesg");
+		obj.setPublishmesg(new String(byteArray));
+		
+		return obj;
+	}
+}
 class InputProductBatchRowMapper implements RowMapper<ProductVo>
 {
 	@Override
 	public ProductVo mapRow(ResultSet rs,int rownum) throws SQLException{
 		ProductVo user=new ProductVo();
 		user.setProductID(rs.getLong("ProductID"));
-		user.setProduct_Json(rs.getLong("ProductJson"));
+		user.setProductjson(rs.getString("ProductJson"));
 		return user;
 		
 	}

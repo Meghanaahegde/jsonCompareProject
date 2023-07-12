@@ -36,7 +36,14 @@ public class jsonComparisionService {
 			if(IPobj.equals(OPobj)) {
 				extentlogger.log(LogStatus.PASS, "IP and OP matches","Json match are equals");
 			}else {
+				
 				//start printing the diff elements
+				if(IPobj.getDifferenceList().contains("sourceProductConfigSystem")) {
+					extentlogger.log(LogStatus.FAIL, productpath,"<b>Source</b><br>"+IPobj.getSourceProductConfigSystem()+"<br>"+OPobj.getSourceProductConfigSystem());
+				}
+				if(IPobj.getDifferenceList().contains("Keys")) {
+					//IPobj.getKeys().getkeysDiff
+				}
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

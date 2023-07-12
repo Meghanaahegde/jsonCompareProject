@@ -39,8 +39,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 public class FileConsumerService {
 	@Autowired
 	JsonComparisionProperties jsonCompareProperty;
-	@Autowired
-	jsonComparisionService jsoncomparisionService;
+//	@Autowired
+//	jsonComparisionService jsoncomparisionService;
+	jsonComparisionService jsoncomparisionService=new jsonComparisionService();
 	@Autowired
 	inputrepo IPRepo;
 	@Autowired
@@ -56,13 +57,19 @@ public class FileConsumerService {
 
 	public void processInboundFiles() throws Exception {
 		
-		String IPJsonPath=jsonCompareProperty.getInputjsonPath();
-		String OPJsonPath=jsonCompareProperty.getOutputjsonPath();
-		String FilePrefix=jsonCompareProperty.getFullFilePrefix();
-		String ReportFolder=jsonCompareProperty.getExtentreportPath();
-		String runFromLocal=jsonCompareProperty.getRunFromLocal();
-		String runFromSQLtoOracleOrDifferentEnvi=jsonCompareProperty.getRunFromSQLtoOracleOrDifferentEnvi();
-		String runFromOracletoOracleOrSameEnvi=jsonCompareProperty.getRunFromOracletoOracleOrSameEnvi();
+		//String IPJsonPath=jsonCompareProperty.getInputjsonPath();
+		String IPJsonPath="C:\\\\Users\\\\admin\\\\jsoncompare\\\\inputfile\\";
+		//String OPJsonPath=jsonCompareProperty.getOutputjsonPath();
+		String OPJsonPath="C:\\\\Users\\\\admin\\\\jsoncompare\\\\outputfile\\";
+		//String FilePrefix=jsonCompareProperty.getFullFilePrefix();
+		String FilePrefix=null;
+				
+		String ReportFolder="C:\\jsonCompare\\reports";
+		String runFromLocal="Yes";
+		String runFromSQLtoOracleOrDifferentEnvi="No";
+				//jsonCompareProperty.getRunFromSQLtoOracleOrDifferentEnvi();
+		String runFromOracletoOracleOrSameEnvi="No";
+				//jsonCompareProperty.getRunFromOracletoOracleOrSameEnvi();
 		
 		extent=new ExtentReports(createFolderwithCurrentDate(ReportFolder)+"//"+"JsonCompare_"+getTimeStamp()+".html", false);
 		
@@ -112,13 +119,14 @@ public class FileConsumerService {
 			
 			String[] paths=null;
 			List<String> filename=new ArrayList<>();
-			String fileTypes=jsonCompareProperty.getInboundFileTypes();
+			String fileTypes="json";
+					//jsonCompareProperty.getInboundFileTypes();
 			List<String> inboundfilytypes=Stream.of(fileTypes.split(",")).collect(Collectors.toList());
 			File inputfile= new File(IPJsonPath);
 			File outputfile=new File(OPJsonPath);
 			
-			IPObjects=readjson(inputfile,inboundfilytypes,FilePrefix,filename,paths,IPJsonPath);
-			OPObjects=readjson(outputfile,inboundfilytypes,FilePrefix,filename,paths,OPJsonPath);
+			IPObjects=readjson(inputfile,inboundfilytypes,"json",filename,paths,IPJsonPath);
+			OPObjects=readjson(outputfile,inboundfilytypes,"json",filename,paths,OPJsonPath);
 			
 			Set<String> IPKeyset=IPObjects.keySet();
 			ArrayList<String> IpKeys=new ArrayList<>(IPKeyset);

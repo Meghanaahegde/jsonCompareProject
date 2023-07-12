@@ -12,25 +12,30 @@ import org.springframework.stereotype.Component;
 import com.jsonproj.service.FileConsumerService;
 
 @SpringBootApplication
-@ComponentScan("com.jsonProj")
-@EnableCaching
-@Component
-public class PractiseApplication implements CommandLineRunner{
+////@ComponentScan("com.jsonproj")
+//@EnableCaching
+////@Component
+//implements CommandLineRunner
+public class PractiseApplication {
 
-	@Autowired
-	FileConsumerService consumer;
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
-	public static void main(String[] args) {
-		SpringApplication.run(PractiseApplication.class, args);
+	//@Autowired
+	static FileConsumerService consumer=new FileConsumerService();
+	
+	public static void main(String[] args) throws Exception{
+		//SpringApplication.run(PractiseApplication.class, args);
 		
-		
+		try {
+			consumer.processInboundFiles();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-		consumer.processInboundFiles();
-	}
+//	@Override
+//	public void run(String... args) throws Exception {
+//		// TODO Auto-generated method stub
+//		consumer.processInboundFiles();
+//	}
 
 }

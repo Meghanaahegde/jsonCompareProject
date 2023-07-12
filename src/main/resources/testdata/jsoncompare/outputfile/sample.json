@@ -1,0 +1,483 @@
+{
+  "product": {
+    "sourceProductConfigSystem": "PLANIT",
+    "$schema": "https://pmt.anthem.com/bpi/IngestionSchemas/4.2",
+    "version": "4.2",
+    "keys": {
+      "productId": 168856,
+      "effectiveDate": "2024-01-01",
+      "portfolioYear": 2024,
+      "productType": "medical"
+    },
+    "publishAttributes": {
+      "transactionId": "438e72e67a1cde9d:1f1a4bf8:18827707678:-7677",
+      "timestamp": 5222023052213698,
+      "type": "internal"
+    },
+    "productInfo": {
+      "productAttributes": {
+        "productName": "Anthem Silver Blue Preferred POS 3200EC/0%/6000 w/HSA",
+        "masterBrandId": 11,
+        "masterBrand": "Anthem Blue Cross and Blue Shield",
+        "brandingId": null,
+        "branding": null,
+        "legalEntity": "Compcare Health Services Insurance Corporation",
+        "exchangeIndicatorId": null,
+        "exchangeIndicator": "Off",
+        "variantId": "00"
+      },
+      "planAttributes": {
+        "marketSegment": "Small Group",
+        "metalLevelCode": null,
+        "metalLevelDescription": "Silver",
+        "targetAvPercentage": null,
+        "benefitRelativity": null,
+        "marketSegmentCode": "SG",
+        "meetsMedicarePartDRxCredibleCoverageFlag": "Yes"
+      },
+      "costShareVariations": null,
+      "healthAccountInfo": null,
+      "networks": [
+        {
+          "networkLevelCode": "INN",
+          "networkLevelName": "In-Network",
+          "networkTypeId": 3,
+          "networkType": "POS",
+          "networkId": null,
+          "networkName": "Blue Preferred",
+          "deductibleSingle": 3200,
+          "deductibleFamily": 6400,
+          "outOfPocketSingle": 6000,
+          "outOfPocketFamily": 12000,
+          "defaultCoinsurance": 0,
+          "accumulatorDedOopOptionId": 1,
+          "accumulatorDedOopOption": "Embedded",
+          "defaultCopay": null,
+          "enterpriseNetworkId": null
+        },
+        {
+          "networkLevelCode": "OON",
+          "networkLevelName": "Non-Network",
+          "networkTypeId": 3,
+          "networkType": "POS",
+          "networkId": null,
+          "networkName": "Blue Preferred",
+          "deductibleSingle": 9600,
+          "deductibleFamily": 19200,
+          "outOfPocketSingle": 18000,
+          "outOfPocketFamily": 36000,
+          "defaultCoinsurance": 0.5,
+          "accumulatorDedOopOptionId": 1,
+          "accumulatorDedOopOption": "Embedded",
+          "defaultCopay": 0,
+          "enterpriseNetworkId": null
+        }
+      ],
+      "outOfAreaDetails": null,
+      "contractCodes": [
+        {
+          "contractCode": "9ZQZ",
+          "alternateId": null,
+          "customPlanFlag": "No",
+          "effectiveDate": "2024-01-01",
+          "dateChanged": "05112023174558040",
+          "portfolioYear": 2024,
+          "adminstrationCodeType": "CY",
+          "adminstrationCodeDescription": "CY",
+          "hpcc": "H42H",
+          "pcpSelectionRequiredId": 3,
+          "pcpReferralRequiredFlag": "No",
+          "pcpSelectionRequiredDescription": "Optional",
+          "productId": 168856,
+          "marketSegmentCode": "SG",
+          "marketSegment": "Small Group",
+          "state": "Wisconsin",
+          "stateCode": "WI",
+          "productName": "Anthem Silver Blue Preferred POS 3200EC/0%/6000 w/HSA",
+          "riderContractCodeId": null,
+          "riders": [
+            {
+              "riderId": null,
+              "riderName": null
+            }
+          ],
+          "healthWellnessInfo": null,
+          "serviceAreas": [
+            {
+              "serviceAreaId": 80,
+              "serviceAreaName": "WIS002",
+              "hiosComponentId": "79475WI0360506",
+              "variantContractCodeServiceAreaId": null
+            }
+          ],
+          "clinicalInfo": null,
+          "productProfileAttributes": null,
+          "enhancedMemberServiceName": "24/7",
+          "enhancedMemberServiceCode": "24_7",
+          "digitalEnablementPartners": [
+            {
+              "partneredProvider": [
+                {
+                  "partnerName": "K-Chat",
+                  "experienceAvailableCode": "YWP",
+                  "experienceAvailableDescription": "Yes with promotion",
+                  "partnerCode": "KChat"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "medicalBenefits": [
+        {
+          "benefitCategoryId": 26,
+          "benefitCategoryName": "G2. Hospice",
+          "medicalBenefitDetails": [
+            {
+              "benefitId": 256,
+              "benefitName": "Inpatient Hospice",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "COPAY",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 10,
+                  "costShareType": "Ded, then C Copay",
+                  "copayAmount": 750,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            },
+            {
+              "benefitId": 257,
+              "benefitName": "Outpatient Hospice",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "COPAY",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 10,
+                  "costShareType": "Ded, then C Copay",
+                  "copayAmount": 60,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            },
+            {
+              "benefitId": 258,
+              "benefitName": "Respite Care",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "COPAY",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 10,
+                  "costShareType": "Ded, then C Copay",
+                  "copayAmount": 60,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            },
+            {
+              "benefitId": 254,
+              "benefitName": "Home Hospice",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "COPAY",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 10,
+                  "costShareType": "Ded, then C Copay",
+                  "copayAmount": 60,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            },
+            {
+              "benefitId": 255,
+              "benefitName": "Bereavement",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "COPAY",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 10,
+                  "costShareType": "Ded, then C Copay",
+                  "copayAmount": 60,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "benefitCategoryId": 1,
+          "benefitCategoryName": "Preventive",
+          "medicalBenefitDetails": [
+            {
+              "benefitId": 272,
+              "benefitName": "Preventive Care for Chronic Conditions",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "CIF",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 7,
+                  "costShareType": "CIF",
+                  "copayAmount": null,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            },
+            {
+              "benefitId": 1,
+              "benefitName": "Enterprise HCR Preventive",
+              "enterprisePlanId": null,
+              "stateCode": "WI",
+              "marketSegmentCode": "SG",
+              "innCoreCostShareType": "CIF",
+              "statePlanLimitOverrideId": null,
+              "oonCoreCostShareType": "COINS",
+              "level2Flag": "No",
+              "medicalBenefitNetworkLevels": [
+                {
+                  "networkLevel": "INN",
+                  "networkLevelName": "In-Network",
+                  "costShareTypeId": 7,
+                  "costShareType": "CIF",
+                  "copayAmount": null,
+                  "coinsurancePercentage": null,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                },
+                {
+                  "networkLevel": "OON",
+                  "networkLevelName": "Non-Network",
+                  "costShareTypeId": 6,
+                  "costShareType": "Ded/Coins",
+                  "copayAmount": null,
+                  "coinsurancePercentage": 0.5,
+                  "quantity": null,
+                  "quantityUnitCode": null,
+                  "quantityUnitName": null,
+                  "interval": null,
+                  "intervalName": null,
+                  "limitComments": null,
+                  "specialInstructions": null,
+                  "isTieredBenefit": "No",
+                  "benefitRules": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pharmacyPlan": null,
+      "pharmacyBenefitNetworks": null,
+      "productNotes": null,
+      "hasFacilityTiering": "No",
+      "hasSiteOfService": "Yes",
+      "maternity": "Global",
+      "docGenInstructions": null
+    }
+  }
+}
